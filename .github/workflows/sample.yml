@@ -1,6 +1,6 @@
 name: Reusable workflows
 on: [push,pull_request]
-job:
+jobs:
   build:
     run-on: self-hosted
     steps:
