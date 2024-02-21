@@ -1,5 +1,5 @@
 name: Reusable workflows
-on: [push,pull_request,workflow_call]
+on: [workflow_call]
 jobs:
   build:
     runs-on: self-hosted
