@@ -1,21 +1,9 @@
-jobs:
-  CI_steps:
-    runs-on: self-hosted
+name: Reusable workflows
+on: [push,pull_request]
+job:
+  build:
+    run-on: self-hosted
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-
-      - name: Unit tests
-        run: echo Unit tests
-
-      - name: Integration tests
-        run: echo Integration tests
-
-      - name: SAST Scans
-        run: echo SAST Scans
-
-      - name: Detect Secrets in Source Code
-        run: echo Detect Secrets in Source Code
-
-      - name: Code Quality
-        run: echo Code Quality
+      - uses: actions/checkout@v4
+      - name: SAST Scan
+        run: echo SAST Scan
